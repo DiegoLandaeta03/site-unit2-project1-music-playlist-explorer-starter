@@ -2,5 +2,67 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    /* background-color: #f8f8f8; */
+    background: linear-gradient(to right, lightblue, rgb(249, 249, 254));
 }
+
+header {
+    background-color: rgb(218, 218, 218);
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#title{
+    margin: 0;
+}
+
+.list{
+    margin: auto;
+    padding: 10px;
+}
+
+.list:hover{
+    background-color: black;
+    color: white
+}
+
+.center{
+    justify-content: center;
+}
+
+#playlists{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+/* CSS for Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+ }
+ .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+ }
+ .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+ }
+ .close:hover,
+ .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+ }
