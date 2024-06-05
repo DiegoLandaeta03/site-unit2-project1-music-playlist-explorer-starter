@@ -17,7 +17,7 @@ header {
     opacity: 50;
     text-align: center;
     margin-bottom: 1em;
-    filter: saturate(5);
+    filter: saturate(3);
 }
 
 #title{
@@ -94,7 +94,7 @@ footer {
     opacity: 50;
     text-align: center;
     margin-bottom: 1em;
-    filter: saturate(5);
+    filter: saturate(3);
 
     margin-top: auto;
     margin-bottom: 0;
