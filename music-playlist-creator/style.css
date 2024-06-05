@@ -17,6 +17,7 @@ header {
     opacity: 50;
     text-align: center;
     margin-bottom: 1em;
+    border-radius: 90px;
     filter: saturate(3);
 }
 
@@ -25,13 +26,14 @@ header {
 }
 
 #playlists{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
 }
 
 .list{
-    margin: 1em;
+    margin: 0.5em;
     padding: 0.5em;
     /* border-radius: 12px 12px 8px 8px; */
     border-radius: 20px;
@@ -49,7 +51,7 @@ header {
 
 .image{
     margin: auto;
-    border-radius: 360px;
+    border-radius: 20px;
 }
 
 .space-evenly { 
@@ -67,31 +69,46 @@ header {
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
- }
- .modal-content {
-    background-color: #fefefe;
+}
+.modal-content {
+    /* background-color: #fefefe; */
+    background-color: rgb(230, 173, 216);
+    filter: saturate(2);
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
+    border-radius: 20px;
     width: 80%; /* Could be more or less, depending on screen size */
- }
- .close {
+}
+.close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
- }
- .close:hover,
- .close:focus {
+}
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
- }
+}
+
+#imageAndTitle{
+    display: flex;
+}
+
+#titleAndCreator{
+    margin-left: 2em;
+}
+
+#playlistImage{
+    width: 10em;
+    height: 8em;
+}
 
 footer {
     /* background-color: rgb(218, 218, 218); */
     background-color: rgb(230, 173, 216);
-    opacity: 50;
     text-align: center;
     margin-bottom: 1em;
     filter: saturate(3);

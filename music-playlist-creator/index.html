@@ -16,11 +16,18 @@
 
     <main> 
         <div id="playlists">
-            <div class="list">
+            <!-- <div class="list" onclick="openModal({name: 'Summer Beats Festival', imageUrl: '/music-playlist-creator/assets/img/song.png', dates: 'July 15-17', location: 'Downtown Park', lineup: ['Artist A', 'Artist B']})">
+                <img class="image" src="/music-playlist-creator/assets/img/playlist.png" alt="Playlist" width="200">
+                <h3>Playlist Title</h3>
+                <p>Creator Name</p>
+            </div> -->
+
+            <div class="list" onclick="openModal({imageUrl: '/music-playlist-creator/assets/img/song.png', name: 'Playlist Title', creator: 'Creator Name'})">
                 <img class="image" src="/music-playlist-creator/assets/img/playlist.png" alt="Playlist" width="200">
                 <h3>Playlist Title</h3>
                 <p>Creator Name</p>
             </div>
+    
 
             <div class="list">
                 <img class="image" src="/music-playlist-creator/assets/img/playlist.png" alt="Playlist" width="200">
@@ -63,14 +70,13 @@
                 <h3>Playlist Title</h3>
                 <p>Creator Name</p>
             </div>
-            
         </div>
 
     </main>
 
     <modal-overlay>
         <!-- Modal Structure -->
-        <div id="festivalModal" class="modal">
+        <!-- <div id="songModal" class="modal">
             <div class="modal-content">
             <span class="close">&times;</span>
             <h1 id="festivalName"></h1>
@@ -79,7 +85,27 @@
             <p id="festivalLocation"></p>
             <div id="artistLineup"></div>
             </div>
+        </div> -->
+
+        <div id="playlistModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="imageAndTitle">
+                    <img id="playlistImage" src="" alt="Playlist Image">
+                    <div id="titleAndCreator">
+                        <h1 id="playlistName"></h1>
+                        <p id="creator"></p>
+                    </div>
+                </div>
+                <div id="songSection">
+                    <div class="song">
+                        <p>Song 1</p>
+                        <p>Song 2</p>
+                    </div>
+                </div>
+            </div>
         </div>
+        
     </modal-overlay>
 
     <footer>
