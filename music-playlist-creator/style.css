@@ -1,38 +1,59 @@
 body {
-    font-family: 'Arial', sans-serif;
+    /* font-family: 'Arial', sans-serif; */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Coda Caption', sans-serif;
     margin: 0;
     padding: 0;
-    /* background-color: #f8f8f8; */
-    background: linear-gradient(to right, lightblue, rgb(249, 249, 254));
+    background-color: rgb(173, 216, 230);
+    /* background: linear-gradient(to right, lightblue, rgb(249, 249, 254)); */
 }
 
 header {
-    background-color: rgb(218, 218, 218);
+    /* background-color: rgb(218, 218, 218); */
+    background-color: rgb(230, 173, 216);
+    opacity: 50;
     text-align: center;
     margin-bottom: 1em;
+    filter: saturate(5);
 }
 
 #title{
     margin: 0;
 }
 
-.list{
-    margin: auto;
-    padding: 10px;
-}
-
-.list:hover{
-    background-color: black;
-    color: white
-}
-
-.center{
-    justify-content: center;
-}
-
 #playlists{
     display: grid;
     grid-template-columns: auto auto auto auto;
+    justify-content: space-evenly;
+}
+
+.list{
+    margin: 1em;
+    padding: 0.5em;
+    /* border-radius: 12px 12px 8px 8px; */
+    border-radius: 20px;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    background-color: rgb(230, 201, 173);
+    filter: saturate(5);
+}
+
+.list:hover{
+    background-color: rgb(216, 230, 173);;
+    /* color: white; */
+}
+
+.image{
+    margin: auto;
+    border-radius: 360px;
+}
+
+.space-evenly { 
+    justify-content: space-evenly; 
 }
 
 /* CSS for Modal */
@@ -66,3 +87,15 @@ header {
     text-decoration: none;
     cursor: pointer;
  }
+
+footer {
+    /* background-color: rgb(218, 218, 218); */
+    background-color: rgb(230, 173, 216);
+    opacity: 50;
+    text-align: center;
+    margin-bottom: 1em;
+    filter: saturate(5);
+
+    margin-top: auto;
+    margin-bottom: 0;
+}
