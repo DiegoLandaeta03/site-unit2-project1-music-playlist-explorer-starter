@@ -6,10 +6,38 @@ function openModal(playlist) {
    document.getElementById('playlistImage').src = playlist.playlist_art;
    document.getElementById('playlistName').innerText = playlist.playlist_name;
    document.getElementById('creator').innerText = playlist.playlist_creator;
-   // document.getElementById('festivalDates').innerText = `Dates: ${festival.dates}`;
-   // document.getElementById('festivalLocation').innerText = `Location: ${festival.location}`;
-   // document.getElementById('artistLineup').innerHTML = `<strong>Lineup:</strong> ${festival.lineup.join(', ')}`;
    modal.style.display = "block";
+   // let songs = playlist.songs;
+   // console.log(songs);
+   const songList = document.getElementById("songSection");
+
+   // removes all songs before
+   while(songList.hasChildNodes()){
+      songList.removeChild(songList.firstChild);
+   }
+   
+   playlist.songs.forEach((song) => {
+      let id = song.songId;
+      let title = song.title;
+      let artist = song.artist;
+      let album = song.album;
+      let art = song.cover_art;
+      let duration = song.duration;
+      const songItem = document.createElement("div");
+      songItem.innerHTML = `
+         <div id="song">
+               <img id="songImage" src="${art}" alt="Song Image">
+               <div id="songDetails">
+                     <h4 id="songName">${title}</h4>
+                     <p id="artist">${artist}</p>
+                     <p id="album">${album}</p>
+               </div>
+               <p id="duration">${duration}</p>
+         </div>
+      `;
+
+      songList.appendChild(songItem);
+   })
 }
 
 span.onclick = function() {
