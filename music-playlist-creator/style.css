@@ -13,11 +13,11 @@ body {
 
 header {
     /* background-color: rgb(218, 218, 218); */
-    background-color: rgb(230, 173, 216);
+    background-color: rgb(230, 173, 216, 0.8);
     opacity: 50;
     text-align: center;
     margin-bottom: 1em;
-    border-radius: 90px;
+    border-radius: 10px;
     filter: saturate(3);
 }
 
@@ -30,9 +30,11 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
+    margin-bottom: 1.2em;
 }
 
 .list{
+    transition: all 0.5s ease;
     margin: 0.5em;
     padding: 0.5em;
     /* border-radius: 12px 12px 8px 8px; */
@@ -42,10 +44,14 @@ header {
     border-style: solid;
     background-color: rgb(230, 201, 173);
     filter: saturate(5);
+    box-shadow: 10px 10px rgb(230, 173, 216, 0.8);
 }
 
 .list:hover{
-    background-color: rgb(216, 230, 173);;
+    transition: all 0.5s ease;
+    background-color: rgb(216, 230, 173);
+    transform: translate3d(0, -2px, 0) scale(1.1);
+    box-shadow: 10px 10px rgb(240, 226, 123);
     /* color: white; */
 }
 
@@ -81,7 +87,8 @@ header {
     width: 80%; /* Could be more or less, depending on screen size */
 }
 .close {
-    color: #aaa;
+    /* color: #aaa; */
+    color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -108,11 +115,12 @@ header {
 
 footer {
     /* background-color: rgb(218, 218, 218); */
-    background-color: rgb(230, 173, 216);
+    background-color: rgb(230, 173, 216, 0.8);
     text-align: center;
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
     filter: saturate(3);
 
     margin-top: auto;
-    margin-bottom: 0;
+    /* margin-bottom: 0; */
+    border-radius: 10px;
 }
