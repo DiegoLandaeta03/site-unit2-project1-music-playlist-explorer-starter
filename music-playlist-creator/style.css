@@ -55,6 +55,27 @@ header {
     /* color: white; */
 }
 
+#likeSection{
+    text-align: center;
+}
+
+#likeButton{
+    border-width: 1px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+#likeButton:hover{
+    border-width: 1px;
+    border-color: white;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+}
+
+
+
 .image{
     margin: auto;
     border-radius: 20px;
@@ -123,13 +144,20 @@ header {
 
 #song{ 
     /* width: 100%; */
+    transition: all 0.5s ease;
     display: flex;
-    background-color: white;
+    background-color: rgba(225, 225, 225, 0.8);
     border-radius: 10px;
     padding-left: 5px;
     padding-top: 10px;
     padding: 10px 5px 10px 5px;
     margin-bottom: 0.5em;
+}
+
+#song:hover{
+    transition: all 0.5s ease;
+    background-color: rgb(225, 225, 225);
+    transform: translate3d(0, -2px, 0) scale(1.03);
 }
 
 #songImage{
