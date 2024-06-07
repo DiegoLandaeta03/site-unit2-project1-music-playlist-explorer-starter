@@ -1,10 +1,85 @@
 // JavaScript for Opening and Closing the Modal
 var modal = document.getElementById("playlistModal");
 var span = document.getElementsByClassName("close")[0];
-var shuffleItem = document.getElementsByClassName("shuffle");
 
 function populateFeatured(){
-   let array = randPlaylist()
+   let array = randPlaylist(data.playlists);
+   let playlist = array[0];
+   let id = playlist.playlistID;
+   let name = playlist.playlist_name;
+   let creator = playlist.playlist_creator;
+   let art = playlist.playlist_art;
+   let likeCount = playlist.likeCount;
+   let songs = playlist.songs;
+   const feature = document.getElementById('feature');
+
+   // removes all playlists before
+   while(feature.hasChildNodes()){
+      feature.removeChild(feature.firstChild);
+   }
+
+   const playlistDetails = document.createElement("div");
+   playlistDetails.innerHTML = `
+      <div id="featuredDetails">
+         <img class="image" src="${art}" alt="Playlist">
+         <h3 id="featuredTitle">${name}</h3>
+         <p id="featuredCreator">${creator}</p>
+      </div> 
+   `;
+
+   feature.appendChild(playlistDetails);
+
+   const featuredSongs = document.createElement("div");
+   featuredSongs.innerHTML = `
+      <div id="featuredSongs">
+      </div>
+   `;
+
+   feature.appendChild(featuredSongs);
+
+   const songList = document.getElementById('featuredSongs');
+
+   playlist.songs.forEach((song) => {
+      let id = song.songId;
+      let title = song.title;
+      let artist = song.artist;
+      let album = song.album;
+      let art = song.cover_art;
+      let duration = song.duration;
+      const songItem = document.createElement("div");
+      songItem.innerHTML = `
+         <div id="fSong">
+               <img id="songImage" src="${art}" alt="Song Image">
+               <div id="songDetails">
+                     <h4 id="songName">${title}</h4>
+                     <p id="artist">${artist}</p>
+                     <p id="album">${album}</p>
+               </div>
+               <p id="duration">${duration}</p>
+         </div>
+      `;
+
+      songList.appendChild(songItem);
+   })
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+   populateFeatured();
+});
+
+function randPlaylist(playlists){
+   console.log(playlists);
+   let array = playlists;
+   let currentIndex = array.length;
+
+   while(currentIndex != 0){
+      let random = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      [array[currentIndex], array[random]] = [array[random], array[currentIndex]];
+   }
+
+   return array;
 }
 
 function openModal(playlist) {
@@ -96,6 +171,7 @@ window.onclick = function(event) {
 function importPlaylists(){
    // Display the fetched playlists
    const playlistList = document.getElementById("playlists");
+
    data.playlists.forEach((playlist) => {
       let id = playlist.playlistID;
       let name = playlist.playlist_name;
@@ -104,9 +180,11 @@ function importPlaylists(){
       let likeCount = playlist.likeCount;
       let songs = playlist.songs;
       // console.log(playlist);
+
       const listItem = document.createElement("div");
       listItem.innerHTML = `
          <div class="list">
+               <span class="delete">&times;</span>
                <img class="image" src="${art}" alt="Playlist">
                <h3 id="playlistTitle">${name}</h3>
                <p id="creatorName">${creator}</p>
@@ -123,7 +201,10 @@ function importPlaylists(){
          const target = event.target;
          if(target.classList.contains('likeButton') || target.closest('.likeButton')){
             like(playlist);
-         } else {
+         } else if(target.classList.contains('delete') || target.closest('.delete')){
+            listItem.remove();
+         }
+         else {
             openModal(playlist);
          }
       });
