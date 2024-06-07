@@ -26,6 +26,14 @@ header {
     filter: saturate(3);
 }
 
+#featuredLink{
+    color: inherit;
+    text-decoration: inherit;
+    font-family: 'Lucida Console', monospace;
+    margin: auto;
+}
+
+
 #title{
     margin: 0;
 }
