@@ -26,7 +26,34 @@ header {
     filter: saturate(3);
 }
 
-#featuredLink{
+.transitionButton{
+    text-align: center;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    transition: all 0.3s ease;
+    /* margin: 0.5em; */
+    padding: 0.5em;
+    /* border-radius: 12px 12px 8px 8px; */
+    border-radius: 20px;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    background-color: rgb(230, 201, 173);
+    filter: saturate(5);
+    box-shadow: 7px 7px rgb(230, 173, 216, 0.8);
+    width: 230px;
+    /* align-content: center; */
+}
+
+.transitionButton:hover{
+    transition: all 0.3s ease;
+    background-color: rgb(216, 230, 173);
+    transform: translate3d(0, -2px, 0) scale(1.06);
+    box-shadow: 10px 10px rgb(240, 226, 123);
+}
+
+.changeLink{
     color: inherit;
     text-decoration: inherit;
     font-family: 'Lucida Console', monospace;
