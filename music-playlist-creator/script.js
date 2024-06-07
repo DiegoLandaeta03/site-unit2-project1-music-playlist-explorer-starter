@@ -66,11 +66,25 @@ function importPlaylists(){
          <div class="list">
                <img class="image" src="${art}" alt="Playlist" width="200">
                <h3>${name}</h3>
-               <p>${creator}</p>
+               <p id="creatorName">${creator}</p>
+               <div id="likeSection">
+                  <button id="likeButton">
+                        <p id="like">♡</p>
+                        <p id="likeCount">${likeCount}</p>
+                  </button>
+               </div>
          </div>
       `;
 
-      listItem.addEventListener("click", () => {
+      listItem.addEventListener("click", function(event){
+         // if(event.target === document.getElementsByClassName('image') || 
+         //    event.target === this.querySelector('h3') ||
+         //    event.target === document.getElementById('creatorName')){
+         // }     
+         if(event.target === document.getElementById('likeButton') || 
+            document.getElementById('likeButton').contains(event.target)){
+               return;
+         }       
          openModal(playlist);
       });
       playlistList.appendChild(listItem);
