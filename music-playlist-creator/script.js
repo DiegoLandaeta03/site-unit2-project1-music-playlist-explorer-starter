@@ -64,7 +64,7 @@ function importPlaylists(){
       const listItem = document.createElement("div");
       listItem.innerHTML = `
          <div class="list">
-               <img class="image" src="${art}" alt="Playlist" width="200">
+               <img class="image" src="${art}" alt="Playlist">
                <h3>${name}</h3>
                <p id="creatorName">${creator}</p>
                <div id="likeSection">
