@@ -1,6 +1,7 @@
 // JavaScript for Opening and Closing the Modal
 var modal = document.getElementById("playlistModal");
 var span = document.getElementsByClassName("close")[0];
+var shuffleItem = document.getElementsByClassName("shuffle");
 
 function openModal(playlist) {
    document.getElementById('playlistImage').src = playlist.playlist_art;
@@ -9,6 +10,29 @@ function openModal(playlist) {
    modal.style.display = "block";
    // let songs = playlist.songs;
    // console.log(songs);
+
+   const buttonSection = document.getElementById("buttonSection");
+
+   // removes all songs before
+   while(buttonSection.hasChildNodes()){
+      buttonSection.removeChild(buttonSection.firstChild);
+   }
+   const shuffleButton = document.createElement("div");
+   shuffleButton.innerHTML = `
+      <button class="shuffle">
+         <p>Shuffle</p>
+      </button>
+   `;
+
+   shuffleButton.addEventListener("click", function(event){
+      const target = event.target;
+      if(target.classList.contains('shuffle') || target.closest('.shuffle')){
+         shuffle(event, playlist);
+      } 
+   });
+
+   buttonSection.appendChild(shuffleButton);
+
    const songList = document.getElementById("songSection");
 
    // removes all songs before
@@ -38,6 +62,21 @@ function openModal(playlist) {
 
       songList.appendChild(songItem);
    })
+}
+
+function shuffle(event, playlist){
+   // console.log(playlist.songs);
+   let array = playlist.songs;
+   let currentIndex = array.length;
+
+   while(currentIndex != 0){
+      let random = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      [array[currentIndex], array[random]] = [array[random], array[currentIndex]];
+   }
+
+   openModal(playlist);
 }
 
 span.onclick = function() {
@@ -79,7 +118,7 @@ function importPlaylists(){
       listItem.addEventListener("click", function(event){
          const target = event.target;
          if(target.classList.contains('likeButton') || target.closest('.likeButton')){
-            like(event, playlist);
+            like(playlist);
          } else {
             openModal(playlist);
          }
@@ -89,7 +128,7 @@ function importPlaylists(){
    })
 }
 
-function like(event, playlist){
+function like(playlist){
    playlist.likeCount++;
    const listItem = event.currentTarget;
    const likeCount = listItem.querySelector('.likeCount');

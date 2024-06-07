@@ -167,6 +167,25 @@ header {
     border-radius: 10px;
 }
 
+.shuffle{
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    border-width: 0;
+    width: 10em;
+    justify-content: center;
+    margin-top: 1em;
+    background-color: rgba(173, 216, 230, 0.7);
+    /* background-color: rgb(240, 226, 123, 0.7); */
+
+}
+
+.shuffle:hover{
+    transition: all 0.3s ease;
+    background-color: rgb(173, 216, 230, 0.9);
+    /* background-color: rgb(240, 226, 123, 0.9); */
+    transform: translate3d(0, -2px, 0) scale(1.03);
+}
+
 #songSection{
     margin-top: 1em;
 }
