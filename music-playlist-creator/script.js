@@ -65,11 +65,11 @@ function importPlaylists(){
       listItem.innerHTML = `
          <div class="list">
                <img class="image" src="${art}" alt="Playlist">
-               <h3>${name}</h3>
+               <h3 id="playlistTitle">${name}</h3>
                <p id="creatorName">${creator}</p>
                <div id="likeSection">
                   <button class="likeButton">
-                        <p class="like">♡</p>
+                        <p class="like">🩶</p>
                         <p class="likeCount">${likeCount}</p>
                   </button>
                </div>
