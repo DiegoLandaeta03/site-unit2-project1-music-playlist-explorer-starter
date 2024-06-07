@@ -3,6 +3,10 @@ var modal = document.getElementById("playlistModal");
 var span = document.getElementsByClassName("close")[0];
 var shuffleItem = document.getElementsByClassName("shuffle");
 
+function populateFeatured(){
+   let array = randPlaylist()
+}
+
 function openModal(playlist) {
    document.getElementById('playlistImage').src = playlist.playlist_art;
    document.getElementById('playlistName').innerText = playlist.playlist_name;

@@ -18,18 +18,24 @@
         <div class="transitionButton">
             <a class="changeLink" href="/music-playlist-creator/index.html"> Click to go back to explorer</a>
         </div>
-        <div id="featuredSongs">
-            <!-- <div class="list">
+        <div id="feature">
+            <div id="featuredDetails">
                 <img class="image" src="/music-playlist-creator/assets/img/playlist.png" alt="Playlist">
-                <h3 id="playlistTitle">Playlist Title</h3>
-                <p id="creatorName">Creator</p>
-                <div id="likeSection">
-                    <button class="likeButton">
-                            <p class="like">🩶</p>
-                            <p class="likeCount">0</p>
-                    </button>
-                </div>
-            </div> -->
+                <h3 id="featuredTitle">${name}</h3>
+                <p id="featuredCreator">${creator}</p>
+            </div>
+            <div id="songSection">
+                <div id="song">
+                    <img id="songImage" src="${art}" alt="Song Image">
+                    <div id="songDetails">
+                        <h4 id="songName">${title}</h4>
+                        <p id="artist">${artist}</p>
+                        <p id="album">${album}</p>
+                    </div>
+                    <p id="duration">${duration}</p>
+            </div>
+            </div>
+        </div>
         </div>
     </main>
 
