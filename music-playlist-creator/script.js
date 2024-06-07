@@ -68,27 +68,35 @@ function importPlaylists(){
                <h3>${name}</h3>
                <p id="creatorName">${creator}</p>
                <div id="likeSection">
-                  <button id="likeButton">
-                        <p id="like">♡</p>
-                        <p id="likeCount">${likeCount}</p>
+                  <button class="likeButton">
+                        <p class="like">♡</p>
+                        <p class="likeCount">${likeCount}</p>
                   </button>
                </div>
          </div>
       `;
-
+      
       listItem.addEventListener("click", function(event){
-         // if(event.target === document.getElementsByClassName('image') || 
-         //    event.target === this.querySelector('h3') ||
-         //    event.target === document.getElementById('creatorName')){
-         // }     
-         if(event.target === document.getElementById('likeButton') || 
-            document.getElementById('likeButton').contains(event.target)){
-               return;
-         }       
-         openModal(playlist);
+         const target = event.target;
+         if(target.classList.contains('likeButton') || target.closest('.likeButton')){
+            like(event, playlist);
+         } else {
+            openModal(playlist);
+         }
       });
+
       playlistList.appendChild(listItem);
    })
+}
+
+function like(event, playlist){
+   playlist.likeCount++;
+   const listItem = event.currentTarget;
+   const likeCount = listItem.querySelector('.likeCount');
+   const updateCount = playlist.likeCount;
+   const like = listItem.querySelector('.like');
+   likeCount.textContent = updateCount;
+   like.textContent = '❤️';
 }
 
 importPlaylists();
