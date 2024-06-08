@@ -21,7 +21,7 @@ function populateFeatured(){
    const playlistDetails = document.createElement("div");
    playlistDetails.innerHTML = `
       <div id="featuredDetails">
-         <img class="image" src="${art}" alt="Playlist">
+         <img id="featureImage" src="${art}" alt="Playlist">
          <h3 id="featuredTitle">${name}</h3>
          <p id="featuredCreator">${creator}</p>
       </div> 
