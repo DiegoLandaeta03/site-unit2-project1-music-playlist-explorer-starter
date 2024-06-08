@@ -56,18 +56,15 @@ https://drive.google.com/file/d/1dgD7lobkFnAiDyZ38Da1OT0ivoHVNRGO/view?usp=shari
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Yes, I found the worksops talking through examples of when to use certain tags very helpful. The JavaScript lectures were long but overall I enjoyed them a lot and felt prepareed for tackle the project. I had to do 
-some individual research to do everything I wanted but I think that is the best way to learn. 
+Yes, I found the workshops talking through examples of when to use certain tags very helpful. The JavaScript lectures were long but overall I enjoyed them a lot and felt prepared to tackle the project. I had to do some individual research to do everything I wanted but I think that is the best way to learn. 
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-I would have planned it out more and definitely added comments before just to space out my code in an organized manner. I think my implementation for everything is pretty intuitive but my code's organization definitely
-suffered the more features I added to the website.
+I would have planned it out more and definitely added comments before just to space out my code in an organized manner. I think my implementation for everything is pretty intuitive but my code's organization definitely suffered the more features I added to the website.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-My project demo went really well, my peers told me that they really liked the design and theme I was going for. There were a lot of CSS that some peers had that looked really cool so next time I definitely want to venture
-out and find more cool stuff.
+My project demo went really well, my peers told me that they really liked the design and theme I was going for. There were a lot of CSS that some peers had that looked really cool so next time I definitely want to venture out and find more cool stuff.
 
 ### Open-source libraries used
 
