@@ -48,7 +48,7 @@ Estimated time spent: 25 hours spent in total
 
 ### Walkthrough Video
 
-https://www.loom.com/share/abc78ddf250a4dc7b5aa1e1960208807?sid=13e18097-c1a4-4635-933b-6d27336e053b
+https://www.loom.com/share/abc78ddf250a4dc7b5aa1e1960208807?sid=3332039c-c108-46e0-be7c-9f6b12f07d92
 
 ### Reflection
 
