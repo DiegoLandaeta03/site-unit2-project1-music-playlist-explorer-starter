@@ -4,8 +4,6 @@ Submitted by: Diego Landaeta Torres
 
 Estimated time spent: 25 hours spent in total
 
-Deployed Application (optional): [Music Playlist Explorer Deployed Site](ADD_LINK_HERE)
-
 ### Application Features
 
 #### CORE FEATURES
@@ -50,7 +48,7 @@ Deployed Application (optional): [Music Playlist Explorer Deployed Site](ADD_LIN
 
 ### Walkthrough Video
 
-https://drive.google.com/file/d/1dgD7lobkFnAiDyZ38Da1OT0ivoHVNRGO/view?usp=sharing (couldn't embed link)
+https://www.loom.com/share/abc78ddf250a4dc7b5aa1e1960208807?sid=13e18097-c1a4-4635-933b-6d27336e053b
 
 ### Reflection
 
